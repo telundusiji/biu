@@ -1,0 +1,23 @@
+#服务配置
+server:
+  port: 8080
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+
+
+#文件路径配置
+content:
+  file:
+    path:
+      windows: D:\\opt\\content
+      linux: /opt/content
+git:
+  install:
+    path:
+      windows:
+      linux:
+    package:
+      windows:
+      linux:
