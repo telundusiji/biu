@@ -1,0 +1,224 @@
+{
+  "StreamConfig": {},
+  "State": {
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "RemovalInProgress": false,
+    "Dead": false,
+    "Pid": 15320,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2020-04-27T14:10:29.432187806Z",
+    "FinishedAt": "0001-01-01T00:00:00Z",
+    "Health": null
+  },
+  "ID": "5b5aee3c649a713d1f4ecbe32371f2274792c9810bff685f02692542703b65a5",
+  "Created": "2020-04-27T14:10:28.583783874Z",
+  "Managed": false,
+  "Path": "/opt/jpress/jpress.sh",
+  "Args": [
+    "start"
+  ],
+  "Config": {
+    "Hostname": "5b5aee3c649a",
+    "Domainname": "",
+    "User": "",
+    "AttachStdin": false,
+    "AttachStdout": false,
+    "AttachStderr": false,
+    "ExposedPorts": {
+      "8080/tcp": {}
+    },
+    "Tty": false,
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Env": [
+      "TZ=Asia/Shanghai",
+      "JPRESS_DB_HOST=db",
+      "JPRESS_DB_PORT=3306",
+      "JPRESS_DB_NAME=jpress",
+      "JPRESS_DB_USER=jpress",
+      "JPRESS_DB_PASSWORD=jpress",
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin",
+      "LANG=C.UTF-8",
+      "JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk",
+      "JAVA_VERSION=8u212",
+      "JAVA_ALPINE_VERSION=8.212.04-r0"
+    ],
+    "Cmd": [
+      "/opt/jpress/jpress.sh",
+      "start"
+    ],
+    "Image": "fuhai/jpress:v3.2.4",
+    "Volumes": {
+      "/opt/jpress/webapp/WEB-INF/addons": {},
+      "/opt/jpress/webapp/addons": {},
+      "/opt/jpress/webapp/attachment": {},
+      "/opt/jpress/webapp/templates/dockers": {},
+      "/opt/jpress/webapp/wp-content": {}
+    },
+    "WorkingDir": "/opt/jpress",
+    "Entrypoint": null,
+    "OnBuild": null,
+    "Labels": {
+      "com.docker.compose.config-hash": "bd7aeab3497cb5549b65424edc15841845febee7f389a80e37b39db4998087c3",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "app",
+      "com.docker.compose.project.config_files": "docker-compose.yml",
+      "com.docker.compose.project.working_dir": "/app",
+      "com.docker.compose.service": "jpress",
+      "com.docker.compose.version": "1.25.5",
+      "maintainer": "Michael Yang\u003cfuhai999@gmail.com\u003e"
+    }
+  },
+  "Image": "sha256:d31d7f32296f621c4122f86106c5d4a2a1998d02b8aa159f92a3e2bafdc1111d",
+  "NetworkSettings": {
+    "Bridge": "",
+    "SandboxID": "65452aa0529777e01a6bcdcc3bbe36cad4e3b4c386b295344c38cf3c8a3757c5",
+    "HairpinMode": false,
+    "LinkLocalIPv6Address": "",
+    "LinkLocalIPv6PrefixLen": 0,
+    "Networks": {
+      "app_default": {
+        "IPAMConfig": null,
+        "Links": [
+          "app_db_1:app_db_1",
+          "app_db_1:db",
+          "app_db_1:db_1"
+        ],
+        "Aliases": [
+          "5b5aee3c649a",
+          "jpress"
+        ],
+        "NetworkID": "fcf9b9d8f59438937da534487facbe89c43f5614a7a799e0c8c8fe9eb2e5b53d",
+        "EndpointID": "d558688d661b1cd6cd8b6f83b5609f9f9ffd7aab9b24a75a22a5d5d8a1620aec",
+        "Gateway": "192.168.32.1",
+        "IPAddress": "192.168.32.3",
+        "IPPrefixLen": 20,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "MacAddress": "02:42:c0:a8:20:03",
+        "DriverOpts": null,
+        "IPAMOperational": false
+      }
+    },
+    "Service": null,
+    "Ports": {
+      "8080/tcp": [
+        {
+          "HostIp": "0.0.0.0",
+          "HostPort": "80"
+        }
+      ]
+    },
+    "SandboxKey": "/var/run/docker/netns/65452aa05297",
+    "SecondaryIPAddresses": null,
+    "SecondaryIPv6Addresses": null,
+    "IsAnonymousEndpoint": false,
+    "HasSwarmEndpoint": false
+  },
+  "LogPath": "/var/lib/docker/containers/5b5aee3c649a713d1f4ecbe32371f2274792c9810bff685f02692542703b65a5/5b5aee3c649a713d1f4ecbe32371f2274792c9810bff685f02692542703b65a5-json.log",
+  "Name": "/blog",
+  "Driver": "overlay2",
+  "OS": "linux",
+  "MountLabel": "",
+  "ProcessLabel": "",
+  "RestartCount": 0,
+  "HasBeenStartedBefore": true,
+  "HasBeenManuallyStopped": false,
+  "MountPoints": {
+    "/opt/jpress/webapp/WEB-INF/addons": {
+      "Source": "/app/docker_volumes/webapp/WEB-INF/addons",
+      "Destination": "/opt/jpress/webapp/WEB-INF/addons",
+      "RW": true,
+      "Name": "",
+      "Driver": "",
+      "Type": "bind",
+      "Relabel": "rw",
+      "Propagation": "rprivate",
+      "Spec": {
+        "Type": "bind",
+        "Source": "/app/docker_volumes/webapp/WEB-INF/addons",
+        "Target": "/opt/jpress/webapp/WEB-INF/addons"
+      },
+      "SkipMountpointCreation": false
+    },
+    "/opt/jpress/webapp/addons": {
+      "Source": "/app/docker_volumes/webapp/addons",
+      "Destination": "/opt/jpress/webapp/addons",
+      "RW": true,
+      "Name": "",
+      "Driver": "",
+      "Type": "bind",
+      "Relabel": "rw",
+      "Propagation": "rprivate",
+      "Spec": {
+        "Type": "bind",
+        "Source": "/app/docker_volumes/webapp/addons",
+        "Target": "/opt/jpress/webapp/addons"
+      },
+      "SkipMountpointCreation": false
+    },
+    "/opt/jpress/webapp/attachment": {
+      "Source": "/app/docker_volumes/webapp/attachment",
+      "Destination": "/opt/jpress/webapp/attachment",
+      "RW": true,
+      "Name": "",
+      "Driver": "",
+      "Type": "bind",
+      "Relabel": "rw",
+      "Propagation": "rprivate",
+      "Spec": {
+        "Type": "bind",
+        "Source": "/app/docker_volumes/webapp/attachment",
+        "Target": "/opt/jpress/webapp/attachment"
+      },
+      "SkipMountpointCreation": false
+    },
+    "/opt/jpress/webapp/templates/dockers": {
+      "Source": "/app/docker_volumes/webapp/templates/dockers",
+      "Destination": "/opt/jpress/webapp/templates/dockers",
+      "RW": true,
+      "Name": "",
+      "Driver": "",
+      "Type": "bind",
+      "Relabel": "rw",
+      "Propagation": "rprivate",
+      "Spec": {
+        "Type": "bind",
+        "Source": "/app/docker_volumes/webapp/templates/dockers",
+        "Target": "/opt/jpress/webapp/templates/dockers"
+      },
+      "SkipMountpointCreation": false
+    },
+    "/opt/jpress/webapp/wp-content": {
+      "Source": "/app/docker_volumes/webapp/wp-content",
+      "Destination": "/opt/jpress/webapp/wp-content",
+      "RW": true,
+      "Name": "",
+      "Driver": "",
+      "Type": "bind",
+      "Relabel": "rw",
+      "Propagation": "rprivate",
+      "Spec": {
+        "Type": "bind",
+        "Source": "/app/docker_volumes/webapp/wp-content",
+        "Target": "/opt/jpress/webapp/wp-content"
+      },
+      "SkipMountpointCreation": false
+    }
+  },
+  "SecretReferences": null,
+  "ConfigReferences": null,
+  "AppArmorProfile": "",
+  "HostnamePath": "/var/lib/docker/containers/5b5aee3c649a713d1f4ecbe32371f2274792c9810bff685f02692542703b65a5/hostname",
+  "HostsPath": "/var/lib/docker/containers/5b5aee3c649a713d1f4ecbe32371f2274792c9810bff685f02692542703b65a5/hosts",
+  "ShmPath": "/var/lib/docker/containers/5b5aee3c649a713d1f4ecbe32371f2274792c9810bff685f02692542703b65a5/mounts/shm",
+  "ResolvConfPath": "/var/lib/docker/containers/5b5aee3c649a713d1f4ecbe32371f2274792c9810bff685f02692542703b65a5/resolv.conf",
+  "SeccompProfile": "",
+  "NoNewPrivileges": false
+}
