@@ -6,10 +6,9 @@ import org.springframework.util.StreamUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
 
-public class LinuxCommandUtil {
-    private static final Logger LOGGER = LoggerFactory.getLogger(LinuxCommandUtil.class);
+public class CommandUtil {
+    private static final Logger LOGGER = LoggerFactory.getLogger(CommandUtil.class);
 
     /**
      * CommandResult
@@ -47,7 +46,7 @@ public class LinuxCommandUtil {
         public void setStandardInfo(InputStream standardInfo) {
             new Thread(() -> {
                 try {
-                    this.standardInfo = StreamUtils.copyToString(standardInfo, Charset.defaultCharset());
+                    this.standardInfo = StreamUtils.copyToString(standardInfo, SystemUtil.getCharset());
                 } catch (IOException e) {
                     this.errorInfo = "read standardInfo failed!\n" + e.getMessage();
                 }
@@ -61,7 +60,7 @@ public class LinuxCommandUtil {
         public void setErrorInfo(InputStream errorInfo) {
             new Thread(() -> {
                 try {
-                    this.errorInfo = StreamUtils.copyToString(errorInfo, Charset.defaultCharset());
+                    this.errorInfo = StreamUtils.copyToString(errorInfo, SystemUtil.getCharset());
                 } catch (IOException e) {
                     this.errorInfo = "read errorInfo failed!\n" + e.getMessage();
                 }

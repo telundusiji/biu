@@ -9,15 +9,17 @@ spring:
 
 #文件路径配置
 content:
+  repository:
+    url: https://github.com/telundusiji/kaleidoscope.git
+    username: telundusiji
+    password: h2470893279
   file:
+    used: .md
     path:
-      windows: D:\\opt\\content
+      windows: D:\opt\content
       linux: /opt/content
 git:
   install:
     path:
-      windows:
-      linux:
-    package:
-      windows:
+      windows: D:\programs\Git
       linux:
