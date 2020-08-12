@@ -17,7 +17,7 @@ public class ApplicationInit {
 
     @PostConstruct
     public void init() throws Exception {
-        git.check();
-        contentManager.init();
+//        git.check();
+//        contentManager.init();
     }
 }

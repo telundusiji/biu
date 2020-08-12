@@ -20,4 +20,10 @@ public class ContentController {
     public Object list(@RequestParam(required = false) String path) throws IOException {
         return contentManager.list(path);
     }
+
+    @GetMapping("/index")
+    public String index(){
+        System.out.println("shoudao");
+        return "ceshi";
+    }
 }
