@@ -16,11 +16,13 @@
 
     <properties>
         <spark.version>2.4.4</spark.version>
+        <scala.version>2.12.12</scala.version>
         <maven-assembly-plugin.version>3.0.0</maven-assembly-plugin.version>
     </properties>
 
     <modules>
         <module>spark-test</module>
+        <module>elastic-job-demo</module>
     </modules>
 
     <dependencyManagement>
@@ -112,6 +114,32 @@
     </dependencies>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.2.2</version>
+                <executions>
+                    <execution>
+                        <id>compile-scala</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <scalaVersion>${scala.version}</scalaVersion>
+                    <args>
+                        <arg>-target:jvm-1.8</arg>
+                    </args>
+                    <jvmArgs>
+                        <jvmArg>-Xss8196k</jvmArg>
+                    </jvmArgs>
+                </configuration>
+            </plugin>
+        </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
