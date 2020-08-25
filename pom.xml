@@ -23,6 +23,7 @@
     <modules>
         <module>spark-test</module>
         <module>elastic-job-demo</module>
+        <module>jasypt</module>
     </modules>
 
     <dependencyManagement>
