@@ -1,4 +1,11 @@
 jasypt:
   encryptor:
     #加密秘钥
-    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
+    password: jasypt
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: ENC(ObEJrp5V7VSr+cwStmhtSC8dNvkcY8kwNi3NMrQWcdYEIfFgOZwioFkLvjwD5t3k)
+    url: jdbc:mysql://te-amo.site:33060/jpress?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC
