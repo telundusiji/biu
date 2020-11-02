@@ -1,0 +1,14 @@
+
+download:
+  git: /download/git
+  http: /download/http
+
+
+command:
+  commands:
+    - name: git_clone
+      command: git clone {URL} {PATH}
+      description: git一般下载
+    - name: git_clone
+      command: git clone {URL} {PATH}
+      description: git一般下载

@@ -1,0 +1,16 @@
+[Unit]
+Description={APP_NAME}
+
+[Service]
+#工作目录
+WorkingDirectory={WORK_DIR}
+PrivateTmp=true
+Restart=always
+Type=simple
+#启动命令 前面的路径是jre的路径 后面指定的是配置文件路径
+ExecStart={JRE_HOME}/bin/java -jar {MAIN_JAR} --spring.config.location={CONFIG_FILE_PATH}
+#结束命令
+ExecStop=/usr/bin/kill -15  $MAINPID
+
+[Install]
+WantedBy=multi-user.target
