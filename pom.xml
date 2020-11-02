@@ -27,6 +27,7 @@
         <module>tool</module>
         <module>download-server</module>
         <module>callback</module>
+        <module>flowable</module>
     </modules>
 
     <dependencyManagement>
